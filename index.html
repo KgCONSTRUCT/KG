@@ -72,17 +72,39 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
     }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
-    }
-    .gallery-grid img {
+
+    /* Carousel Styles */
+    .carousel {
+      overflow: hidden;
+      position: relative;
       width: 100%;
-      height: auto;
+      max-width: 1000px;
+      margin: auto;
       border-radius: 8px;
+    }
+    .carousel-track {
+      display: flex;
+      animation: scroll 40s linear infinite;
+    }
+    .carousel-track img {
+      height: 400px;
+      width: auto;
+      flex-shrink: 0;
+      border-radius: 8px;
+      margin-right: 10px;
+      object-fit: cover;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    @media (max-width: 600px) {
+      .carousel-track img {
+        height: 250px;
+      }
+    }
+
     form input, form textarea {
       width: 100%;
       padding: 10px;
@@ -170,16 +192,18 @@
 
   <section id="gallery">
     <h2>Project Gallery</h2>
-    <div class="gallery-grid">
-      <img src="photos/deck.webp" alt="Deck project">
-      <img src="photos/flat.webp" alt="Granny flat">
-      <img src="photos/framing.webp" alt="Framing project">
-      <img src="photos/framing1.webp" alt="Framing stage 2">
-      <img src="photos/kitchen.webp" alt="Kitchen renovation">
-      <img src="photos/main.webp" alt="Main build">
-      <img src="photos/stairs.webp" alt="Staircase construction">
-      <img src="photos/studio.webp" alt="Studio build">
-      <img src="photos/unit.webp" alt="Unit renovation">
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="photos/deck.webp" alt="Deck project">
+        <img src="photos/flat.webp" alt="Granny flat">
+        <img src="photos/framing.webp" alt="Framing project">
+        <img src="photos/framing1.webp" alt="Framing stage 2">
+        <img src="photos/kitchen.webp" alt="Kitchen renovation">
+        <img src="photos/main.webp" alt="Main build">
+        <img src="photos/stairs.webp" alt="Staircase construction">
+        <img src="photos/studio.webp" alt="Studio build">
+        <img src="photos/unit.webp" alt="Unit renovation">
+      </div>
     </div>
   </section>
 
@@ -203,7 +227,4 @@
 
   <footer>
     <p>&copy; 2025 KG CONSTRUCT. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
+  </
