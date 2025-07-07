@@ -72,31 +72,6 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
     }
-    .carousel {
-      overflow: hidden;
-      position: relative;
-      max-width: 1000px;
-      margin: 0 auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .carousel-track {
-      display: flex;
-      white-space: nowrap;
-      animation: scroll 60s linear infinite;
-    }
-    .carousel-track img {
-      width: 100%;
-      max-width: 1000px;
-      height: auto;
-      flex-shrink: 0;
-      object-fit: cover;
-      border-right: 5px solid #fff;
-    }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-1100%); }
-    }
     form input, form textarea {
       width: 100%;
       padding: 10px;
@@ -184,11 +159,9 @@
 
   <section id="gallery">
     <h2>Project Gallery</h2>
-    <div class="carousel">
-      <div class="carousel-track">
-        <!-- Gallery is currently empty. Add images here when ready. -->
-      </div>
-    </div>
+    <p style="text-align: center; color: #666; font-style: italic;">
+      Gallery is currently empty. New project photos coming soon.
+    </p>
   </section>
 
   <section id="contact">
