@@ -72,6 +72,31 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
     }
+    .carousel {
+      overflow: hidden;
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .carousel-track {
+      display: flex;
+      white-space: nowrap;
+      animation: scroll 60s linear infinite;
+    }
+    .carousel-track img {
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+      flex-shrink: 0;
+      object-fit: cover;
+      border-right: 5px solid #fff;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-1100%); }
+    }
     form input, form textarea {
       width: 100%;
       padding: 10px;
@@ -107,6 +132,7 @@
     <a href="#why">Why Us</a>
     <a href="#process">How We Work</a>
     <a href="#testimonials">Reviews</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -154,6 +180,25 @@
     <h2>What Our Clients Say</h2>
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
     <div class="elfsight-app-49d41825-6f1b-48c2-95b0-4b61bbd82409" data-elfsight-app-lazy></div>
+  </section>
+
+  <section id="gallery">
+    <h2>Project Gallery</h2>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="deck.webp" alt="Deck project">
+        <img src="exstention.webp" alt="Extension project">
+        <img src="extenion1.webp" alt="Extension alternate view">
+        <img src="flat.webp" alt="Granny flat">
+        <img src="framing.webp" alt="Framing project">
+        <img src="framing1.webp" alt="Framing stage 2">
+        <img src="kitchen.webp" alt="Kitchen renovation">
+        <img src="main.webp" alt="Main build">
+        <img src="stairs.webp" alt="Staircase construction">
+        <img src="studio.webp" alt="Studio build">
+        <img src="unit.webp" alt="Unit renovation">
+      </div>
+    </div>
   </section>
 
   <section id="contact">
