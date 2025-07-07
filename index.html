@@ -6,10 +6,9 @@
   <title>KG CONSTRUCT | Kieren Gallagher</title>
   <style>
     :root {
-      --green: #2e7d32;
+      --blue: #1f3a93;
       --charcoal: #2c3e50;
       --light: #f4f4f4;
-      --accent: #a5d6a7;
     }
     body {
       margin: 0;
@@ -18,7 +17,7 @@
       color: var(--charcoal);
     }
     header {
-      background: var(--green);
+      background: var(--blue);
       text-align: center;
       padding: 20px;
     }
@@ -40,8 +39,8 @@
       font-weight: bold;
     }
     .hero {
-      background: linear-gradient(to right, #a5d6a7, #81c784);
-      color: #1b5e20;
+      background: linear-gradient(to right, #5c7bd9, #1f3a93);
+      color: white;
       padding: 60px 20px;
       text-align: center;
     }
@@ -76,23 +75,18 @@
       text-align: center;
     }
     .testimonial-slider {
-      overflow: hidden;
-      height: 100px;
       position: relative;
+      height: 120px;
+      overflow: hidden;
     }
-    .testimonial-slider blockquote {
+    .testimonial-slider .slide {
       position: absolute;
       width: 100%;
-      animation: slide 20s infinite;
-      font-style: italic;
-      color: #555;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
     }
-    @keyframes slide {
-      0%, 20% { top: 0; opacity: 1; }
-      25%, 45% { top: -100%; opacity: 1; }
-      50%, 70% { top: -200%; opacity: 1; }
-      75%, 95% { top: -300%; opacity: 1; }
-      100% { top: 0; opacity: 1; }
+    .testimonial-slider .slide.active {
+      opacity: 1;
     }
     form input, form textarea {
       width: 100%;
@@ -102,7 +96,7 @@
       border-radius: 4px;
     }
     form button {
-      background: var(--green);
+      background: var(--blue);
       color: white;
       padding: 10px 20px;
       border: none;
@@ -151,11 +145,11 @@
 
   <section id="testimonials">
     <h2>What Our Clients Say</h2>
-    <div class="testimonial-slider">
-      <blockquote>“Kieren was fantastic. Arrived on time, did a great job.” – Joy B</blockquote>
-      <blockquote>“Great service. Really went the extra mile for us.” – Samantha S</blockquote>
-      <blockquote>“Completed the work to a high standard, on time and within budget.” – Tegan O</blockquote>
-      <blockquote>“Absolutely thrilled with the finished result.” – Kylie M</blockquote>
+    <div class="testimonial-slider" id="testimonial-slider">
+      <div class="slide active">“Kieren was fantastic. Arrived on time, did a great job.” – Joy B</div>
+      <div class="slide">“Great service. Really went the extra mile for us.” – Samantha S</div>
+      <div class="slide">“Completed the work to a high standard, on time and within budget.” – Tegan O</div>
+      <div class="slide">“Absolutely thrilled with the finished result.” – Kylie M</div>
     </div>
   </section>
 
@@ -189,6 +183,16 @@
   <footer>
     <p>&copy; 2025 KG CONSTRUCT. Built with pride by Kieren Gallagher.</p>
   </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.testimonial-slider .slide');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4000);
+  </script>
 
 </body>
 </html>
