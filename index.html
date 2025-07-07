@@ -44,9 +44,6 @@
       padding: 60px 20px;
       text-align: center;
     }
-    .hero h1 {
-      margin-top: 0;
-    }
     .stars {
       font-size: 24px;
       color: gold;
@@ -88,6 +85,25 @@
     .testimonial-slider .slide.active {
       opacity: 1;
     }
+    .sticky-call {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--blue);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+    @media (max-width: 768px) {
+      .sticky-call {
+        display: block;
+      }
+    }
     form input, form textarea {
       width: 100%;
       padding: 10px;
@@ -120,7 +136,9 @@
 
   <nav>
     <a href="#services">Services</a>
-    <a href="#testimonials">Testimonials</a>
+    <a href="#why">Why Us</a>
+    <a href="#process">How We Work</a>
+    <a href="#testimonials">Reviews</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -141,6 +159,28 @@
       <div class="service">🛠️ General carpentry & repairs</div>
       <div class="service">📋 Project management</div>
     </div>
+  </section>
+
+  <section id="why">
+    <h2>Why Choose KG CONSTRUCT</h2>
+    <ul>
+      <li>✔️ 11+ years of experience</li>
+      <li>✔️ Fully licensed & insured</li>
+      <li>✔️ Transparent quotes</li>
+      <li>✔️ On-time, on-budget delivery</li>
+      <li>✔️ Local to Arncliffe & surrounds</li>
+    </ul>
+  </section>
+
+  <section id="process">
+    <h2>How We Work</h2>
+    <ol>
+      <li>Free consultation</li>
+      <li>Site visit & quote</li>
+      <li>Design & approvals</li>
+      <li>Build & project management</li>
+      <li>Final walkthrough</li>
+    </ol>
   </section>
 
   <section id="testimonials">
@@ -171,6 +211,7 @@
     <p><strong>Licence:</strong> NSW Fair Trading 462185C</p>
     <p><strong>ABN:</strong> 47 607 200 644</p>
     <p><strong>Hours:</strong> Monday–Saturday, 12:00 a.m. – Midnight</p>
+    <p><a href="credentials.pdf" download>📄 Download Credentials (PDF)</a></p>
 
     <form action="https://formsubmit.co/kiereng2011@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Your name" required>
@@ -180,19 +221,6 @@
     </form>
   </section>
 
-  <footer>
-    <p>&copy; 2025 KG CONSTRUCT. Built with pride by Kieren Gallagher.</p>
-  </footer>
-
-  <script>
-    const slides = document.querySelectorAll('.testimonial-slider .slide');
-    let current = 0;
-    setInterval(() => {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 4000);
-  </script>
-
-</body>
-</html>
+  <section>
+    <h2>Service Area</h2>
+    <p>We proudly serve Arncliffe and surrounding suburbs including Rockdale, Wolli Creek, Bexley, Kogarah,
