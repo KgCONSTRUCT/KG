@@ -60,42 +60,17 @@
       max-width: 1000px;
       margin: auto;
     }
-    .services-grid {
+    .services-grid, .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
-    .service {
+    .service, .gallery-grid img {
       background: white;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
-    }
-    .carousel {
-      overflow: hidden;
-      position: relative;
-      max-width: 1000px;
-      margin: 0 auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .carousel-track {
-      display: flex;
-      white-space: nowrap;
-      animation: scroll 40s linear infinite;
-    }
-    .carousel-track img {
-      width: 100%;
-      max-width: 1000px;
-      height: auto;
-      flex-shrink: 0;
-      object-fit: cover;
-      border-right: 5px solid #fff;
-    }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-800%); }
     }
     form input, form textarea {
       width: 100%;
@@ -184,17 +159,15 @@
 
   <section id="gallery">
     <h2>Project Gallery</h2>
-    <div class="carousel">
-      <div class="carousel-track">
-        <img src="2023-12-15-httpshomeimprovementpagescomaucontentassets1.webp" alt="Framing project">
-        <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets2.webp" alt="Before renovation">
-        <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets3.webp" alt="After renovation">
-        <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets4.webp" alt="Decking project">
-        <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets5.webp" alt="Timber deck">
-        <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets6.webp" alt="Extension project">
-        <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets7.webp" alt="Outdoor living area">
-        <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets8.webp" alt="Interior renovation">
-      </div>
+    <div class="gallery-grid">
+      <img src="2023-12-15 (1).webp" alt="Framing project">
+      <img src="2023-12-15 (2).webp" alt="Kitchen renovation">
+      <img src="2023-12-15 (3).webp" alt="Decking project">
+      <img src="2023-12-15 (4).webp" alt="Bathroom renovation">
+      <img src="2023-12-15 (5).webp" alt="Extension project">
+      <img src="2023-12-15 (6).webp" alt="Outdoor living area">
+      <img src="2023-12-15 (7).webp" alt="Interior carpentry">
+      <img src="2023-12-15 (8).webp" alt="Completed home project">
     </div>
   </section>
 
@@ -210,4 +183,15 @@
 
     <form action="https://formsubmit.co/kiereng2011@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
-      <input
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Enquiry</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 KG CONSTRUCT. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
