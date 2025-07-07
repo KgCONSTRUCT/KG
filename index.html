@@ -5,48 +5,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KG CONSTRUCT | Kieren Gallagher</title>
   <style>
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f4f4f4; color: #333; }
-    header { background: #1f2d3d; color: white; padding: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-    header img { height: 120px; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    .hero { background: #2980b9; color: white; padding: 60px 20px; text-align: center; }
-    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    .about, .services, .gallery, .testimonials, .contact { margin-bottom: 40px; }
-    .services-grid, .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .service, .gallery img { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
-    blockquote { font-style: italic; color: #555; border-left: 4px solid #ccc; padding-left: 15px; margin: 20px 0; }
-    form input, form textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; }
-    form button { background: #2980b9; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
-    footer { background: #1f2d3d; color: white; text-align: center; padding: 20px; }
+    :root {
+      --green: #2e7d32;
+      --charcoal: #2c3e50;
+      --light: #f4f4f4;
+      --accent: #a5d6a7;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--light);
+      color: var(--charcoal);
+    }
+    header {
+      background: var(--green);
+      text-align: center;
+      padding: 20px;
+    }
+    header img {
+      height: 120px;
+    }
+    nav {
+      background: var(--charcoal);
+      text-align: center;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: linear-gradient(to right, #a5d6a7, #81c784);
+      color: #1b5e20;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      margin-top: 0;
+    }
+    .stars {
+      font-size: 24px;
+      color: gold;
+      margin: 10px 0;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .services-grid, .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .service, .gallery img {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .testimonial-slider {
+      overflow: hidden;
+      height: 100px;
+      position: relative;
+    }
+    .testimonial-slider blockquote {
+      position: absolute;
+      width: 100%;
+      animation: slide 20s infinite;
+      font-style: italic;
+      color: #555;
+    }
+    @keyframes slide {
+      0%, 20% { top: 0; opacity: 1; }
+      25%, 45% { top: -100%; opacity: 1; }
+      50%, 70% { top: -200%; opacity: 1; }
+      75%, 95% { top: -300%; opacity: 1; }
+      100% { top: 0; opacity: 1; }
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background: var(--green);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      background: var(--charcoal);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <a href="index.html">
-      <img src="https://lh3.googleusercontent.com/p/AF1QipMzBtG9dX8KLNSpR1jAVm4NLahO8LKvSluMQczV=s680-w680-h510-rw" alt="KG CONSTRUCT Logo">
-    </a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <img src="https://lh3.googleusercontent.com/p/AF1QipMzBtG9dX8KLNSpR1jAVm4NLahO8LKvSluMQczV=s680-w680-h510-rw" alt="KG CONSTRUCT Logo">
   </header>
 
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <div class="hero">
-    <h1>KG CONSTRUCT</h1>
-    <p>Crafting Quality in Carpentry and Construction</p>
+    <h1>Crafting Quality in Carpentry & Construction</h1>
     <p><strong>Call Kieren: 0421 637 320</strong></p>
+    <div class="stars">★★★★★</div>
+    <p>5.0 Google Rating – Based in Arncliffe, NSW</p>
   </div>
 
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>KG CONSTRUCT is led by Kieren Gallagher, a licensed and experienced builder based in Kogarah, NSW. With a reputation for reliability, quality workmanship, and clear communication, we specialise in home renovations, extensions, and outdoor living spaces. Whether it’s a first-floor addition or a full kitchen upgrade, we deliver results that last.</p>
-  </section>
-
-  <section id="services" class="services">
+  <section id="services">
     <h2>Our Services</h2>
     <div class="services-grid">
       <div class="service">🏠 First-floor additions & extensions</div>
@@ -57,15 +149,17 @@
     </div>
   </section>
 
-  <section id="testimonials" class="testimonials">
+  <section id="testimonials">
     <h2>What Our Clients Say</h2>
-    <blockquote>“Kieren was fantastic. Arrived on time, did a great job.” – Joy B</blockquote>
-    <blockquote>“Great service. Really went the extra mile for us.” – Samantha S</blockquote>
-    <blockquote>“Completed the work to a high standard, on time and within budget.” – Tegan O</blockquote>
-    <blockquote>“Absolutely thrilled with the finished result.” – Kylie M</blockquote>
+    <div class="testimonial-slider">
+      <blockquote>“Kieren was fantastic. Arrived on time, did a great job.” – Joy B</blockquote>
+      <blockquote>“Great service. Really went the extra mile for us.” – Samantha S</blockquote>
+      <blockquote>“Completed the work to a high standard, on time and within budget.” – Tegan O</blockquote>
+      <blockquote>“Absolutely thrilled with the finished result.” – Kylie M</blockquote>
+    </div>
   </section>
 
-  <section id="gallery" class="gallery">
+  <section id="gallery">
     <h2>Project Gallery</h2>
     <div class="gallery-grid">
       <img src="https://via.placeholder.com/300x200?text=Decking" alt="Decking">
@@ -75,11 +169,11 @@
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact">
     <h2>Contact Kieren</h2>
     <p><strong>Phone:</strong> 0421 637 320</p>
     <p><strong>Email:</strong> <a href="mailto:kiereng2011@gmail.com">kiereng2011@gmail.com</a></p>
-    <p><strong>Location:</strong> Princes Ln, Kogarah, NSW 2217</p>
+    <p><strong>Location:</strong> Arncliffe, NSW</p>
     <p><strong>Licence:</strong> NSW Fair Trading 462185C</p>
     <p><strong>ABN:</strong> 47 607 200 644</p>
     <p><strong>Hours:</strong> Monday–Saturday, 12:00 a.m. – Midnight</p>
