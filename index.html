@@ -7,7 +7,7 @@
   <style>
     body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f9f9f9; color: #333; }
     header { background: #2c3e50; color: white; padding: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-    header img { height: 60px; }
+    header img { height: 100px; }
     nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
     .hero { background: #2980b9; color: white; padding: 60px 20px; text-align: center; }
     section { padding: 40px 20px; max-width: 1000px; margin: auto; }
@@ -52,4 +52,43 @@
 
   <section id="testimonials">
     <h2>What Our Clients Say</h2>
-    <blockquote>“Kieren was fantastic. Arrived on time, did a great job.” – Joy B</blockquote
+    <div style="display: grid; gap: 20px;">
+      <blockquote>“Kieren was fantastic. Arrived on time, did a great job.” – Joy B</blockquote>
+      <blockquote>“Great service. Really went the extra mile for us.” – Samantha S</blockquote>
+      <blockquote>“Completed the work to a high standard, on time and within budget.” – Tegan O</blockquote>
+      <blockquote>“Absolutely thrilled with the finished result.” – Kylie M</blockquote>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Project Gallery</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200?text=Decking" alt="Decking">
+      <img src="https://via.placeholder.com/300x200?text=Renovation" alt="Renovation">
+      <img src="https://via.placeholder.com/300x200?text=Extension" alt="Extension">
+      <img src="https://via.placeholder.com/300x200?text=Before+%26+After" alt="Before and After">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Kieren</h2>
+    <p><strong>Phone:</strong> 0421 637 320</p>
+    <p><strong>Email:</strong> <a href="mailto:kiereng2011@gmail.com">kiereng2011@gmail.com</a></p>
+    <p><strong>Location:</strong> Princes Ln, Kogarah, NSW 2217</p>
+    <p><strong>Licence:</strong> NSW Fair Trading 462185C</p>
+    <p><strong>ABN:</strong> 47 607 200 644</p>
+
+    <form action="https://formsubmit.co/kiereng2011@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 KG CONSTRUCT. Built with pride by Kieren Gallagher.</p>
+  </footer>
+
+</body>
+</html>
