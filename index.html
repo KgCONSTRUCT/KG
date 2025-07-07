@@ -84,7 +84,8 @@
     }
     .carousel-track {
       display: flex;
-      animation: scroll 40s linear infinite;
+      width: max-content;
+      animation: scroll 30s linear infinite;
     }
     .carousel-track img {
       height: 400px;
@@ -97,11 +98,38 @@
     }
     @keyframes scroll {
       0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
+      100% { transform: translateX(-50%); }
     }
     @media (max-width: 600px) {
       .carousel-track img {
         height: 250px;
+      }
+    }
+
+    /* Sticky Call Button */
+    .call-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #1f3a93;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 999;
+      transition: background 0.3s;
+    }
+    .call-button:hover {
+      background: #163173;
+    }
+    @media (max-width: 600px) {
+      .call-button {
+        font-size: 16px;
+        padding: 10px 16px;
+        bottom: 15px;
+        right: 15px;
       }
     }
 
@@ -203,28 +231,12 @@
         <img src="photos/stairs.webp" alt="Staircase construction">
         <img src="photos/studio.webp" alt="Studio build">
         <img src="photos/unit.webp" alt="Unit renovation">
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Kieren</h2>
-    <p><strong>Phone:</strong> 0421 637 320</p>
-    <p><strong>Email:</strong> <a href="mailto:kiereng2011@gmail.com">kiereng2011@gmail.com</a></p>
-    <p><strong>Location:</strong> Arncliffe, NSW</p>
-    <p><strong>Licence:</strong> NSW Fair Trading 462185C</p>
-    <p><strong>ABN:</strong> 19 683 506 676</p>
-    <p><strong>Business Name:</strong> KG CONSTRUCT PTY LTD</p>
-    <p><strong>Hours:</strong> Monday–Saturday, 12:00 a.m. – Midnight</p>
-
-    <form action="https://formsubmit.co/kiereng2011@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Enquiry</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 KG CONSTRUCT. All rights reserved.</p>
-  </
+        <!-- Duplicate for seamless scroll -->
+        <img src="photos/deck.webp" alt="Deck project">
+        <img src="photos/flat.webp" alt="Granny flat">
+        <img src="photos/framing.webp" alt="Framing project">
+        <img src="photos/framing1.webp" alt="Framing stage 2">
+        <img src="photos/kitchen.webp" alt="Kitchen renovation">
+        <img src="photos/main.webp" alt="Main build">
+        <img src="photos/stairs.webp" alt="Staircase construction">
+       
