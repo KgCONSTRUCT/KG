@@ -60,17 +60,39 @@
       max-width: 1000px;
       margin: auto;
     }
-    .services-grid, .gallery-grid {
+    .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
-    .service, .gallery img {
+    .service {
       background: white;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
+    }
+    .carousel {
+      overflow: hidden;
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .carousel-track {
+      display: flex;
+      animation: scroll 40s linear infinite;
+    }
+    .carousel-track img {
+      width: 100%;
+      max-width: 1000px;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-800%); }
     }
     .sticky-call {
       display: none;
@@ -178,27 +200,18 @@
 
   <section id="gallery">
     <h2>Project Gallery</h2>
-
-    <h3>🧱 Framing & Structural Work</h3>
-    <div class="gallery-grid">
-      <img src="2023-12-15-httpshomeimprovementpagescomaucontentassets1.webp" alt="Framing project">
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="2023-12-15-httpshomeimprovementpagescomaucontentassets1.webp" alt="Framing project">
+        <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets2.webp" alt="Before renovation">
+        <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets3.webp" alt="After renovation">
+        <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets4.webp" alt="Decking project">
+        <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets5.webp" alt="Timber deck">
+        <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets6.webp" alt="Extension project">
+        <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets7.webp" alt="Outdoor living area">
+        <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets8.webp" alt="Interior renovation">
+      </div>
     </div>
-
-    <h3>🛁 Renovation – Before & After</h3>
-    <div class="gallery-grid">
-      <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets2.webp" alt="Before renovation">
-      <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets3.webp" alt="After renovation">
-    </div>
-
-    <h3>🌿 Outdoor Decking</h3>
-    <div class="gallery-grid">
-      <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets4.webp" alt="Decking project">
-      <img src="2025-05-25-httpshomeimprovementpagescomaucontentassets5.webp" alt="Timber deck">
-    </div>
-
-    <p style="text-align:center; margin-top:30px;">
-      <a href="KG-Project.zip.zip" download>📦 Download Full Project Photo Pack (ZIP)</a>
-    </p>
   </section>
 
   <section id="contact">
@@ -207,10 +220,4 @@
     <p><strong>Email:</strong> <a href="mailto:kiereng2011@gmail.com">kiereng2011@gmail.com</a></p>
     <p><strong>Location:</strong> Arncliffe, NSW</p>
     <p><strong>Licence:</strong> NSW Fair Trading 462185C</p>
-    <p><strong>ABN:</strong> 19 683 506 676</p>
-    <p><strong>Business Name:</strong> KG CONSTRUCT PTY LTD</p>
-    <p><strong>Hours:</strong> Monday–Saturday, 12:00 a.m. – Midnight</p>
-    <p><a href="credentials.pdf" download>📄 Download Credentials (PDF)</a></p>
-
-    <form action="https://formsubmit.co/kiereng2011@gmail.com" method="POST">
-      <input type="
+    <p><
